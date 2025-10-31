@@ -1,0 +1,19 @@
+{
+  "name": "teardown-copilot",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "esbuild src/main.tsx --bundle --outfile=dist/main.js --format=esm --sourcemap --loader:.ts=ts --loader:.tsx=tsx --loader:.css=css --serve=localhost:5173 --servedir=. --watch",
+    "start": "npm run dev",
+    "build": "esbuild src/main.tsx --bundle --outfile=dist/main.js --format=esm --minify --loader:.ts=ts --loader:.tsx=tsx --loader:.css=css"
+  },
+  "dependencies": {
+    "dayjs": "^1.11.10",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "esbuild": "^0.19.5"
+  }
+}
